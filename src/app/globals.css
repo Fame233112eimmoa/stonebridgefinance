@@ -2,25 +2,73 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f1e24;
+
+  /* Brand — turquoise blue (swapped in for the burgundy this template family usually uses) */
+  --brand-50: #eefcfb;
+  --brand-100: #d4f5f3;
+  --brand-200: #aeeae7;
+  --brand-300: #77dad7;
+  --brand-400: #3ec1c0;
+  --brand-500: #1aa5a6;
+  --brand-600: #128488;
+  --brand-700: #146a6e;
+  --brand-800: #16555a;
+  --brand-900: #16474b;
+  --brand-950: #062a2d;
+
+  /* Deep navy used for dark sections / footer, in place of a near-black */
+  --ink-900: #071a20;
+  --ink-800: #0c262e;
+  --ink-700: #12333c;
+
+  --sand-50: #faf9f6;
+  --sand-100: #f4f1ea;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+
+  --color-ink-900: var(--ink-900);
+  --color-ink-800: var(--ink-800);
+  --color-ink-700: var(--ink-700);
+
+  --color-sand-50: var(--sand-50);
+  --color-sand-100: var(--sand-100);
+
+  --font-serif: var(--font-display);
+  --font-sans: var(--font-body);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
