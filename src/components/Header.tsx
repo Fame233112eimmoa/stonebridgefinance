@@ -71,11 +71,18 @@ export default function Header() {
           </Link>
         </div>
 
+        <Link
+          href="/login"
+          className="shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink-800/80 hover:bg-sand-100 hover:text-brand-700 lg:hidden"
+        >
+          Log In
+        </Link>
+
         <button
           type="button"
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-full"
+          className="lg:hidden relative z-50 ml-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
         >
           <span className="sr-only">Menu</span>
           <div className="flex flex-col gap-[5px]">
